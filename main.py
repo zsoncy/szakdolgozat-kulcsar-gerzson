@@ -2,6 +2,7 @@
 from backend.math_calc.equation.linear_equation import Linear_equation
 from backend.math_calc.equation.quadratic_equation import Quadratic_equation
 from backend.math_calc.func_graph.function import Function
+from backend.math_calc.operation.operation import Operation
 
 tuples_to_solve = [(2,1,-1),(11,-33),(9,3)]
 
@@ -28,3 +29,18 @@ for func in functions_to_visualize:
     print(f.solve(2))
     print(f.derivative())
     f.visualize()
+
+
+operations_to_solve = ["100 / 5 + 3 * 2",
+                       "(15 - 3) * (7 + 1)",
+                       "((15.5 + 4.5) * 3) / (2**3 - 2)",
+                       "pow(5, 3) + round(10/3, 2)",
+                       "25 // 3 + 7 % 3",
+                       "80 / (2 * (5 + 3) - (10 ** 1 / 2)) * 5",
+                       "((9 / 3) ** 2) * (100 / 10 + 5) - 4",
+                       "((1 / 2) + (3 / 4)) * (5 + 6 / 3) - 1",
+                       "100 - (5 * 4 + (2 ** 3 * 3)) / 4"]
+
+for op in operations_to_solve:
+    o = Operation(op)
+    print(o.solve())
