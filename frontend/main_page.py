@@ -3,11 +3,20 @@ from PIL import Image
 
 from frontend.page import Page
 
+from frontend.select_calc import Select_Calc_Page
+
 
 class Main_Page(Page):
     def __init__(self, root, *args, **kwargs):
         Page.__init__(self, root,*args, **kwargs)
         self.root=root
+
+        def page1():
+            logo_label.destroy()
+            title_label.destroy()
+            button_1.destroy()
+            button_2.destroy()
+            Select_Calc_Page(self.root)
 
         logo = CTkImage(Image.open("../../LOGO.png"), size=(850, 850))
         logo_label = CTkLabel(root, text="", image=logo)
@@ -22,5 +31,5 @@ class Main_Page(Page):
         button_1.grid(row=1, column=1, sticky="ew", padx=100, pady=(0, 200), ipady=20, ipadx=20)
 
         button_2 = CTkButton(master=root, text="Continue with manual input", fg_color="#4e1d58", hover_color="#370d40",
-                             text_color="#DDC3C3", font=("Helvetica", 40), corner_radius=50)
+                             text_color="#DDC3C3", font=("Helvetica", 40), corner_radius=50, command = page1)
         button_2.grid(row=1, column=1, sticky="ew", padx=100, pady=(100, 50), ipady=20, ipadx=20)
