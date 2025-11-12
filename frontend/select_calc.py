@@ -2,7 +2,7 @@ from customtkinter import *
 
 from frontend.page import Page
 
-from frontend.select_eq import Select_Eq_Page
+from frontend.eq_pages.select_eq import Select_Eq_Page
 
 
 class Select_Calc_Page(Page):

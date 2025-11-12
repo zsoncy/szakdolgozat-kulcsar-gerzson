@@ -1,8 +1,6 @@
 from customtkinter import *
-from PIL import Image
 
 from frontend.main_page import Main_Page
-from frontend.page import Page
 
 
 if __name__ == '__main__':
