@@ -2,6 +2,14 @@
 """
 This module is responsible for solving simple sequences of operations.
 """
+
+def iscorrectoperation(x):
+    try:
+        eval(x)
+        return True
+    except (SyntaxError, NameError, ValueError, TypeError):
+        return False
+
 class Operation:
 
     def __init__(self, operation):

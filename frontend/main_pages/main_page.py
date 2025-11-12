@@ -3,7 +3,7 @@ from PIL import Image
 
 from frontend.page import Page
 
-from frontend.select_calc import Select_Calc_Page
+from frontend.main_pages.select_calc import Select_Calc_Page
 
 
 class Main_Page(Page):

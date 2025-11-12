@@ -1,6 +1,6 @@
 from customtkinter import *
 
-from frontend.main_page import Main_Page
+from frontend.main_pages.main_page import Main_Page
 
 
 if __name__ == '__main__':
