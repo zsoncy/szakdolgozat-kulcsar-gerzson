@@ -6,6 +6,7 @@ class Select_Eq_Page(CTkFrame):
 
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
+        self.grid_columnconfigure(1, weight=1)
 
         self.configure(fg_color="#DDC3C3")
         self.title = "Photo Calculator"

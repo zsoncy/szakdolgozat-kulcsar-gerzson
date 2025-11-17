@@ -4,11 +4,18 @@ from backend.math_calc.equation.equation import isint
 from backend.math_calc.equation.linear_equation import Linear_equation
 
 class Linear_Eq_Page(CTkFrame):
-    def init(self, root):
+    def __init__(self, root):
         super().__init__(root)
 
         self.grid_rowconfigure(0, weight=1)
+        self.grid_rowconfigure(1, weight=1)
         self.grid_columnconfigure(0, weight=1)
+        self.grid_columnconfigure(1, weight=1)
+        self.grid_columnconfigure(2, weight=1)
+        self.grid_columnconfigure(3, weight=1)
+
+        self.configure(fg_color="#DDC3C3")
+        self.title = "Photo Calculator"
 
         def calc():
             label_result.configure(text="Calculating . . .")
@@ -24,20 +31,20 @@ class Linear_Eq_Page(CTkFrame):
         entry_a = CTkEntry(self, placeholder_text="a",  state="normal",
                            height=50, width=100, font=("Helvetica", 80),
                            text_color="#DDC3C3", fg_color="#4e1d58")
-        entry_a.grid(row=0, column=0, sticky="ew", padx=(100,0), pady=200)
+        entry_a.grid(row=0, column=0, sticky="ew", padx=(100,0), pady=100)
 
         label_1 = CTkLabel(self, text="x  +", height=50, width=100, font=("Helvetica", 80),
                            corner_radius=7, text_color="#DDC3C3", fg_color="#4e1d58")
-        label_1.grid(row=0, column=1, sticky="ew", pady=200, ipadx=50, ipady=5)
+        label_1.grid(row=0, column=1, sticky="ew", pady=100, ipadx=50, ipady=5)
 
         entry_b = CTkEntry(self,  placeholder_text="b",  state="normal",
                            height=50, width=100, font=("Helvetica", 80),
                            text_color="#DDC3C3", fg_color="#4e1d58")
-        entry_b.grid(row=0, column=2, sticky="ew", pady=200)
+        entry_b.grid(row=0, column=2, sticky="ew", pady=100)
 
         label_2 = CTkLabel(self, text="= 0", height=50, width=50, font=("Helvetica", 80),
                            corner_radius=7, text_color="#DDC3C3", fg_color="#4e1d58")
-        label_2.grid(row=0, column=3, sticky="ew", padx=(0,100), pady=200, ipadx=50, ipady=5)
+        label_2.grid(row=0, column=3, sticky="ew", padx=(0,100), pady=100, ipadx=50, ipady=5)
 
         label_result = CTkLabel(self, text=" X = ", height=200, width=100, font=("Helvetica", 100),
                                 corner_radius=50, text_color="#370d40", fg_color="orange")

@@ -3,11 +3,16 @@ from customtkinter import *
 from backend.math_calc.operation.operation import iscorrectoperation, Operation
 
 class Operation_Page(CTkFrame):
-    def init(self, root):
+    def __init__(self, root):
         super().__init__(root)
 
         self.grid_rowconfigure(0, weight=1)
+        self.grid_rowconfigure(1, weight=1)
         self.grid_columnconfigure(0, weight=1)
+        self.grid_columnconfigure(1, weight=1)
+
+        self.configure(fg_color="#DDC3C3")
+        self.title = "Photo Calculator"
 
         def calc():
             label_result.configure(text="Calculating . . .")
@@ -22,7 +27,7 @@ class Operation_Page(CTkFrame):
         entry = CTkEntry(self, placeholder_text="Enter the operation line here...",  state="normal",
                            height=50, width=100, font=("Helvetica", 80),
                            text_color="#DDC3C3", fg_color="#4e1d58")
-        entry.grid(row=0, column=0, columnspan=2, sticky="ew", padx=100, pady=200, ipadx=50, ipady=50)
+        entry.grid(row=0, column=0, columnspan=2, sticky="ew", padx=100, pady=(200,100), ipadx=50, ipady=50)
 
 
         label_result = CTkLabel(self, text=" . . . ", height=200, width=100, font=("Helvetica", 100),

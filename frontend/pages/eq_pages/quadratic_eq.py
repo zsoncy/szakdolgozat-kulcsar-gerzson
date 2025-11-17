@@ -6,11 +6,20 @@ from backend.math_calc.equation.equation import isint
 from backend.math_calc.equation.quadratic_equation import Quadratic_equation
 
 class Quadratic_Eq_Page(CTkFrame):
-    def init(self, root):
+    def __init__(self, root):
         super().__init__(root)
 
         self.grid_rowconfigure(0, weight=1)
+        self.grid_rowconfigure(1, weight=1)
         self.grid_columnconfigure(0, weight=1)
+        self.grid_columnconfigure(1, weight=1)
+        self.grid_columnconfigure(2, weight=1)
+        self.grid_columnconfigure(3, weight=1)
+        self.grid_columnconfigure(4, weight=1)
+        self.grid_columnconfigure(5, weight=1)
+
+        self.configure(fg_color="#DDC3C3")
+        self.title = "Photo Calculator"
 
         def calc():
 
